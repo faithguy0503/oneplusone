@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>초등 스마트 학습기기 10일 체험(대여)</title>
+  <meta name="description" content="초등 학습 습관을 위한 스마트 학습기기 10일 체험(대여). 신규 회원, 기기 로그인 인증 시 혜택 제공. 예비초~초5 대상.">
+  <style>
+    :root{
+      --bg:#f7f8fa; --card:#ffffff; --ink:#101828; --muted:#667085; --brand:#2f6fed; --line:#eaecef;
+      --ok:#16a34a; --warn:#ca8a04;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:-apple-system, BlinkMacSystemFont, 'Noto Sans KR', 'Apple SD Gothic Neo', Roboto, 'Segoe UI', sans-serif; color:var(--ink); background:var(--bg)}
+    .wrap{max-width:960px; margin:0 auto; padding:24px}
+    .card{background:var(--card); border-radius:16px; box-shadow:0 6px 20px rgba(0,0,0,.06); padding:28px}
+    .hero h1{font-size:28px; margin:0 0 8px}
+    .hero p{margin:6px 0; color:var(--muted)}
+    .badge{display:inline-block; font-size:12px; padding:6px 10px; border-radius:999px; background:#eef2ff; color:#3730a3; margin-right:8px}
+    .grid{display:grid; gap:16px}
+    @media(min-width:900px){ .grid-2{grid-template-columns:1.1fr .9fr} }
+    .list{margin:0; padding-left:18px}
+    .list li{margin:6px 0}
+    .kicker{font-size:14px; color:var(--muted); margin-bottom:10px}
+    .cta{display:block; width:100%; padding:14px 18px; font-weight:700; font-size:18px; border:none; border-radius:12px; background:var(--brand); color:#fff; cursor:pointer}
+    .cta[disabled]{opacity:.5; cursor:not-allowed}
+    label{font-size:14px; font-weight:600; margin:10px 0 6px; display:block}
+    input, select, textarea{width:100%; padding:12px; border:1px solid var(--line); border-radius:10px; font-size:16px; background:#fff}
+    .row{display:flex; gap:12px}
+    .row>div{flex:1}
+    .help{font-size:12px; color:var(--muted); margin-top:6px}
+    .note{font-size:13px; color:#334155; background:#f1f5f9; padding:12px; border-radius:12px}
+    .legal{font-size:12px; color:var(--muted)}
+    .divider{height:1px; background:var(--line); margin:18px 0}
+    .pill{display:inline-flex; gap:8px; align-items:center; background:#ecfdf5; color:#065f46; padding:8px 10px; border-radius:999px; font-size:12px}
+    .warn{background:#fffbeb; color:#92400e}
+    .foot{font-size:12px; color:#667085; margin-top:16px}
+  </style>
+  <script>
+    // URL 파라미터를 히든필드에 넣기
+    function hydrateParams(){
+      const q = new URLSearchParams(window.location.search);
+      ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','sub1','sub2'].forEach(k=>{
+        const el = document.querySelector('[name="'+k+'"]');
+        if (el && q.get(k)) el.value = q.get(k);
+      });
+    }
+    window.addEventListener('DOMContentLoaded', hydrateParams);
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="hero">
+        <span class="badge">예비초 ~ 초5 대상 (초6 제외)</span>
+        <h1>초등 스마트 학습기기 <u>10일 체험(대여)</u></h1>
+        <p class="kicker">체험 기간 동안 실제 수업 흐름과 교재 구성을 그대로 경험해 보세요.</p>
+      </div>
+
+      <div class="grid grid-2" style="margin-top:14px">
+        <section>
+          <h3 style="margin:8px 0 8px; font-size:18px">체험 안내</h3>
+          <ul class="list">
+            <li>학년·과목에 맞춘 학습 기기와 콘텐츠를 <b>10일간 체험(대여)</b>합니다.</li>
+            <li><b>신규 회원</b> & <b>체험 기기 로그인 인증</b> 완료 시 <b>네이버페이 1만원</b> 제공*.</li>
+            <li>가구당 1회 참여 가능, 자세한 기준은 하단 유의사항 참고.</li>
+          </ul>
+          <div class="note" style="margin-top:10px">* 혜택은 체험일 기준 익월 10일까지 문자 발송되며, 기기 로그인 인증이 확인되어야 합니다.</div>
+
+          <div class="divider"></div>
+
+          <h3 style="margin:8px 0 8px; font-size:18px">체험 포인트</h3>
+          <ul class="list">
+            <li>아이 수준에 맞춘 단계별 학습 진행</li>
+            <li>집에서도 유지되는 일일 학습 루틴</li>
+            <li>부모가 보기 쉬운 학습 리포트</li>
+          </ul>
+
+          <div class="divider"></div>
+          <div class="pill" title="인증 인센티브">
+            <span>✅</span><span>기기 로그인 인증율이 높을수록 혜택 수령까지 빠르게 진행됩니다.</span>
+          </div>
+        </section>
+
+        <section aria-labelledby="apply">
+          <h3 id="apply" style="margin:8px 0 8px; font-size:18px">체험 신청</h3>
+          <!-- 승인 후 제공되는 애드팟 랜딩/DB 수신 URL로 교체하세요 -->
+          <form method="POST" action="https://example.com/lead">
+            <label for="name">보호자 성함</label>
+            <input id="name" name="name" required placeholder="예: 홍길동">
+
+            <div class="row">
+              <div>
+                <label for="phone">연락처</label>
+                <input id="phone" name="phone" type="tel" required placeholder="010-0000-0000" pattern="^01[0-9]-?[0-9]{3,4}-?[0-9]{4}$">
+                <div class="help">정확한 번호로 입력해 주세요. 인증 및 안내에 사용됩니다.</div>
+              </div>
+              <div>
+                <label for="region">거주 지역</label>
+                <input id="region" name="region" required placeholder="예: 서울 강서구 / 수원 영통구">
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="grade">자녀 학년</label>
+                <select id="grade" name="grade" required>
+                  <option value="">선택하세요</option>
+                  <option>예비초</option>
+                  <option>초1</option>
+                  <option>초2</option>
+                  <option>초3</option>
+                  <option>초4</option>
+                  <option>초5</option>
+                </select>
+                <div class="help">※ 초6은 이번 체험 대상에서 제외됩니다.</div>
+              </div>
+              <div>
+                <label for="calltime">연락 가능 시간</label>
+                <input id="calltime" name="calltime" placeholder="예: 평일 14~18시">
+              </div>
+            </div>
+
+            <label for="memo">궁금한 점(선택)</label>
+            <textarea id="memo" name="memo" rows="3" placeholder="아이 학습 습관/과목/진도 등 문의 내용을 적어주세요."></textarea>
+
+            <div class="divider"></div>
+            <label><input type="checkbox" name="privacy_agree" required> 개인정보 수집·이용 동의(필수)</label>
+            <div class="legal">
+              수집 항목: 성함, 연락처, 지역, 자녀 학년, 연락 가능 시간, 문의 내용<br>
+              이용 목적: 체험 안내 및 기기 로그인 인증 절차 안내, 중복·부정 신청 방지<br>
+              보관 기간: 신청일로부터 6개월 (관련 법령에 따라 달라질 수 있음)<br>
+              동의 거부 권리: 동의 거부 시 체험 신청이 제한될 수 있습니다.
+            </div>
+            <label><input type="checkbox" name="marketing_optin"> 마케팅 정보 수신 동의(선택)</label>
+
+            <!-- 트래킹 필드 -->
+            <input type="hidden" name="utm_source">
+            <input type="hidden" name="utm_medium">
+            <input type="hidden" name="utm_campaign">
+            <input type="hidden" name="utm_content">
+            <input type="hidden" name="utm_term">
+            <input type="hidden" name="sub1">
+            <input type="hidden" name="sub2">
+
+            <div class="divider"></div>
+            <button class="cta" type="submit">30초 만에 체험 신청</button>
+            <div class="foot">과장·허위 정보 기재 및 대상 외 신청은 승인되지 않습니다.</div>
+          </form>
+        </section>
+      </div>
+
+      <div class="divider"></div>
+
+      <section>
+        <h3 style="margin:8px 0 8px; font-size:18px">유의사항</h3>
+        <ul class="list">
+          <li>본 페이지는 <b>체험(대여) 모집</b>에 관한 안내로, 기기 소유권 이전이나 증정은 포함되지 않습니다.</li>
+          <li><b>체험 기간은 10일</b>이며, 상세 혜택은 공식 안내에 따릅니다.</li>
+          <li>혜택 수령은 <b>신규 회원</b>이면서 <b>체험 기기 로그인 인증</b>이 확인된 경우에 한합니다.</li>
+          <li>가구당 1회 참여 가능, 동일 IP에서 1시간 이내 다중 신청은 제한될 수 있습니다.</li>
+          <li>경쟁사와의 비교, 가격·할인 관련 표현, 특정 인물 이미지 사용 등은 금지됩니다.</li>
+        </ul>
+        <div class="note warn" style="margin-top:10px">
+          금지 키워드: <b>“무료, 지원, 교육비, 문구비, 완구비, 선착순, 신청현황, 교육지원, 교재증정”</b><br>
+          본 페이지 및 연계 게시물(블로그/쇼츠/광고 카피) 어디에도 사용하지 않도록 주의해 주세요.
+        </div>
+      </section>
+
+      <div class="divider"></div>
+      <p class="legal">본 랜딩은 캠페인 운영사의 가이드에 따라 사전 검수를 거친 후 집행되어야 합니다.</p>
+    </div>
+  </div>
+</body>
+</html>
